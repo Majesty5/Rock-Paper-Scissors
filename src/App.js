@@ -11,6 +11,19 @@ this.state = {
 }
   }
 
+//Home of the Methods
+  playGame = () => {
+    this.setState({
+      playerOne: this.signs [Math.floor(Math.random()*3)],
+      playerTwo: this.signs [Math.floor(Math.random()*3)],
+    })
+  }
+
+  // decideWinner = () => {
+  //
+  //   })
+  // }
+
 
   render (){
     return (
@@ -20,7 +33,7 @@ this.state = {
         <PlayerCard sign={this.state.playerTwo}/>
         </div>
         <div className="winner"> The Champiyon! </div>
-        <button type="button"> Get This Work </button>
+        <button type="button" onClick={this.playGame}> Get This Work </button>
       </div>
     )
   }
